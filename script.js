@@ -140,9 +140,9 @@ vec3 env(vec3 r){
 
 void main(){
   vec2 uv = gl_FragCoord.xy / uRes * 2.0 - 1.0;
-  vec3 camPos = vec3(0.0, 2.226, 3.562);
-  vec3 fw = vec3(0.0, -0.53, -0.848);
-  vec3 up = vec3(0.0, 0.848, -0.53);
+  vec3 camPos = vec3(0.0, 4.2, 0.0);
+  vec3 fw = vec3(0.0, -1.0, 0.0);
+  vec3 up = vec3(0.0, 0.0, -1.0);
   vec3 rdW = normalize(fw + (vec3(1.0, 0.0, 0.0) * uv.x + up * uv.y) * K);
   vec3 ro = uM * (camPos - vec3(0.0, uY, 0.0));
   vec3 rd = uM * rdW;
